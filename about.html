@@ -10,11 +10,7 @@
         <header>
             <span class="site-name">Javier J Pineda</span>
             <nav>
-                <button
-                    class="hamburger"
-                    aria-label="Menu"
-                    onclick="toggleMenu()"
-                >
+                <button class="hamburger" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -55,21 +51,5 @@
         </main>
 
         <footer>&copy; 2026 Javier J Pineda</footer>
-
-        <script>
-            function toggleMenu() {
-                document.getElementById("menu").classList.toggle("open");
-                document.querySelector(".hamburger").classList.toggle("active");
-            }
-
-            document.addEventListener("click", function (e) {
-                const menu = document.getElementById("menu");
-                const btn = document.querySelector(".hamburger");
-                if (!menu.contains(e.target) && !btn.contains(e.target)) {
-                    menu.classList.remove("open");
-                    btn.classList.remove("active");
-                }
-            });
-        </script>
     </body>
 </html>

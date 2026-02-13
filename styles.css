@@ -70,6 +70,18 @@ nav {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+nav:hover .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+nav:hover .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+nav:hover .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .dropdown {
     display: none;
     position: absolute;
@@ -84,7 +96,8 @@ nav {
     overflow: hidden;
 }
 
-.dropdown.open {
+.dropdown.open,
+nav:hover .dropdown {
     display: block;
 }
 
@@ -162,7 +175,7 @@ main {
 .profile-photo {
     position: absolute;
     top: 72px;
-    left: 1.5rem;
+    left: 12px;
     width: 160px;
     height: 160px;
     border-radius: 50%;
