@@ -1,62 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Javier Pineda</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <nav>
-    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="dropdown" id="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About Me</a>
-    </div>
-  </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Me - Javier J Pineda</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <span class="site-name">Javier J Pineda</span>
+            <nav>
+                <button
+                    class="hamburger"
+                    aria-label="Menu"
+                    onclick="toggleMenu()"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="dropdown" id="menu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About Me</a>
+                </div>
+            </nav>
+        </header>
 
-  <main>
-    <div class="about-content">
-      <h1>About Me</h1>
-      <p>
-        I am Javier Pineda, a researcher and developer passionate about building
-        meaningful software and advancing scientific understanding through computation.
-      </p>
-      <p>
-        My work sits at the intersection of software engineering, machine learning,
-        and computational science. I enjoy tackling complex problems, contributing to
-        open-source projects, and collaborating with others to push the boundaries of
-        what technology can achieve.
-      </p>
-      <p>
-        When I'm not coding or reading papers, you can find me exploring new ideas,
-        learning new tools, and looking for the next interesting challenge.
-      </p>
-    </div>
-  </main>
+        <main>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>
+                    I am Javier Pineda, a researcher and developer passionate
+                    about building meaningful software and advancing scientific
+                    understanding through computation.
+                </p>
+                <p>
+                    My work sits at the intersection of software engineering,
+                    machine learning, and computational science. I enjoy
+                    tackling complex problems, contributing to open-source
+                    projects, and collaborating with others to push the
+                    boundaries of what technology can achieve.
+                </p>
+                <p>
+                    When I'm not coding or reading papers, you can find me
+                    exploring new ideas, learning new tools, and looking for the
+                    next interesting challenge.
+                </p>
+            </div>
+        </main>
 
-  <footer>
-    &copy; 2026 Javier Pineda
-  </footer>
+        <footer>&copy; 2026 Javier J Pineda</footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('open');
-      document.querySelector('.hamburger').classList.toggle('active');
-    }
+        <script>
+            function toggleMenu() {
+                document.getElementById("menu").classList.toggle("open");
+                document.querySelector(".hamburger").classList.toggle("active");
+            }
 
-    document.addEventListener('click', function (e) {
-      const menu = document.getElementById('menu');
-      const btn = document.querySelector('.hamburger');
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.classList.remove('open');
-        btn.classList.remove('active');
-      }
-    });
-  </script>
-</body>
+            document.addEventListener("click", function (e) {
+                const menu = document.getElementById("menu");
+                const btn = document.querySelector(".hamburger");
+                if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                    menu.classList.remove("open");
+                    btn.classList.remove("active");
+                }
+            });
+        </script>
+    </body>
 </html>
