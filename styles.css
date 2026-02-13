@@ -158,6 +158,16 @@ main {
     font-size: 1.05rem;
 }
 
+/* Profile photo */
+.profile-photo {
+    position: absolute;
+    top: 72px;
+    left: 1.5rem;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
 /* About page */
 .about-content {
     max-width: 640px;
