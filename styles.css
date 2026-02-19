@@ -134,32 +134,47 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 3rem;
-    max-width: 50vw;
-    padding: 20px 20px 0;
+    padding: 20px 2rem 0 20px;
+}
+
+.profile-section .profile-photo {
+    position: static;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+.social-links-right {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.social-links-right a {
+    display: flex;
+    color: #444;
+    transition:
+        color 0.2s,
+        transform 0.2s;
+}
+
+.social-links-right a:hover {
+    color: #0066cc;
+    transform: translateY(-2px);
+}
+
+.social-links-right svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
 }
 
 .home-main {
     justify-content: flex-start;
-    padding-top: 2rem;
-}
-
-.profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    flex-shrink: 0;
-}
-
-.profile-card .profile-photo {
-    position: static;
-    width: 160px;
-    height: 160px;
-}
-
-.profile-card .social-links {
-    gap: 1.5rem;
-    margin-bottom: 0;
+    padding-top: 3rem;
 }
 
 .profile-info {
@@ -167,6 +182,7 @@ main {
     color: #444;
     line-height: 1.5;
     padding-top: 0.25rem;
+    max-width: calc(66vw - 160px - 3rem - 20px);
 }
 
 .profile-tagline {
