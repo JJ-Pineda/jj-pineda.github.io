@@ -129,6 +129,53 @@ main {
     padding: 2rem;
 }
 
+/* Profile sidebar */
+.profile-sidebar {
+    position: absolute;
+    top: 72px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    max-width: 50vw;
+}
+
+.profile-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.profile-sidebar .profile-photo {
+    position: static;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    padding-top: 0.25rem;
+}
+
+.profile-tagline {
+    margin-bottom: 0.75rem;
+    font-style: italic;
+    color: #555;
+}
+
+.profile-role {
+    margin-bottom: 0.5rem;
+}
+
+.profile-sidebar .social-links {
+    gap: 1.5rem;
+    margin-bottom: 0;
+}
+
 /* Social links */
 .social-links {
     display: flex;
