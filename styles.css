@@ -78,16 +78,18 @@ main {
     flex-shrink: 0;
 }
 
-.social-links-right {
-    margin-left: auto;
+.social-links-fixed {
+    position: fixed;
+    top: 80px;
+    right: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     align-items: center;
-    margin-right: 5px;
+    z-index: 100;
 }
 
-.social-links-right a {
+.social-links-fixed a {
     display: flex;
     color: #444;
     transition:
@@ -95,12 +97,12 @@ main {
         transform 0.2s;
 }
 
-.social-links-right a:hover {
+.social-links-fixed a:hover {
     color: #0066cc;
     transform: translateY(-2px);
 }
 
-.social-links-right svg {
+.social-links-fixed svg {
     width: 28px;
     height: 28px;
     fill: currentColor;
@@ -250,6 +252,56 @@ main {
 
 .about-content p {
     margin-bottom: 1rem;
+}
+
+/* Left-aligned content pages */
+.content-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2.5rem 4rem;
+}
+
+.content-left h1 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Education */
+.edu-entry {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.edu-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.edu-entry h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.edu-degree {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.edu-date {
+    color: #777;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.edu-blurb {
+    margin-left: 1.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Footer */
