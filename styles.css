@@ -267,6 +267,54 @@ main {
     margin-bottom: 2rem;
 }
 
+/* Experience */
+.exp-company {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.exp-company:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.exp-company h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.exp-location {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.25rem;
+}
+
+.exp-role {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.exp-role h4 {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.15rem;
+}
+
+.exp-date {
+    color: #777;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.exp-blurb {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Education */
 .edu-entry {
     margin-bottom: 1.5rem;
