@@ -29,6 +29,11 @@ header {
     font-weight: 600;
     color: #fff;
     letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.site-name:hover {
+    color: #dde4ea;
 }
 
 /* Navigation */
