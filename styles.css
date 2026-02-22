@@ -357,6 +357,14 @@ main {
     line-height: 1.6;
 }
 
+.edu-detail {
+    margin-left: 3rem;
+    margin-top: 0.75rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Footer */
 footer {
     text-align: center;
