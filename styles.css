@@ -222,6 +222,15 @@ main {
     font-size: 1rem;
 }
 
+.pub-title a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.pub-title a:visited {
+    color: #333;
+}
+
 .pub-authors {
     font-size: 0.9rem;
     color: #555;
