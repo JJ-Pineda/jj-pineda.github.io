@@ -370,6 +370,22 @@ main {
     line-height: 1.6;
 }
 
+.edu-blurb a,
+.edu-detail a {
+    color: #555;
+    text-decoration: underline;
+}
+
+.edu-blurb a:visited,
+.edu-detail a:visited {
+    color: #555;
+}
+
+.edu-blurb a:hover,
+.edu-detail a:hover {
+    color: #333;
+}
+
 .edu-detail {
     margin-left: 3rem;
     margin-top: 0.75rem;
