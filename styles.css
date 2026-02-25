@@ -354,7 +354,7 @@ main a:visited:hover {
 }
 
 .exp-role {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     margin-left: 3rem;
 }
 
@@ -372,6 +372,13 @@ main a:visited:hover {
 }
 
 .exp-blurb {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.exp-skills {
+    margin-top: 0.4rem;
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
