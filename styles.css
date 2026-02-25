@@ -11,6 +11,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("assets/neural-network-background.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
 }
 
 /* Header */
