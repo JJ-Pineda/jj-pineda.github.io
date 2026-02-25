@@ -249,16 +249,7 @@ main {
 }
 
 .pub-title a {
-    color: #333;
     text-decoration: underline;
-}
-
-.pub-title a:visited {
-    color: #333;
-}
-
-.pub-title a:hover {
-    color: #0066cc;
 }
 
 .pub-authors {
@@ -272,7 +263,17 @@ main {
     font-style: italic;
 }
 
-main a:hover {
+main a {
+    color: #555;
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: #555;
+}
+
+main a:hover,
+main a:visited:hover {
     color: #0066cc;
 }
 
@@ -413,23 +414,6 @@ main a:hover {
     line-height: 1.6;
 }
 
-.edu-blurb a,
-.edu-detail a {
-    color: #555;
-    text-decoration: underline;
-}
-
-.edu-blurb a:visited,
-.edu-detail a:visited {
-    color: #555;
-}
-
-.edu-blurb a:hover,
-.edu-detail a:hover,
-.edu-blurb a:visited:hover,
-.edu-detail a:visited:hover {
-    color: #0066cc;
-}
 
 .edu-detail {
     margin-left: 3rem;
