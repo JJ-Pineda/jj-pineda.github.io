@@ -257,6 +257,10 @@ main {
     color: #333;
 }
 
+.pub-title a:hover {
+    color: #0066cc;
+}
+
 .pub-authors {
     font-size: 0.9rem;
     color: #555;
@@ -266,6 +270,10 @@ main {
     font-size: 0.85rem;
     color: #777;
     font-style: italic;
+}
+
+main a:hover {
+    color: #0066cc;
 }
 
 /* Blurb */
@@ -417,8 +425,10 @@ main {
 }
 
 .edu-blurb a:hover,
-.edu-detail a:hover {
-    color: #333;
+.edu-detail a:hover,
+.edu-blurb a:visited:hover,
+.edu-detail a:visited:hover {
+    color: #0066cc;
 }
 
 .edu-detail {
