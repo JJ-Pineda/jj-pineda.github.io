@@ -397,10 +397,12 @@ main a:visited:hover {
 }
 
 .exp-skills {
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
+    font-style: italic;
 }
 
 /* Education */
