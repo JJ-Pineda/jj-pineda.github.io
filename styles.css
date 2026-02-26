@@ -277,6 +277,14 @@ main a:visited:hover {
     color: #0066cc;
 }
 
+/* Experience page links always shown in blue */
+.exp-blurb a,
+.exp-blurb a:visited,
+.exp-skills a,
+.exp-skills a:visited {
+    color: #0066cc;
+}
+
 /* Blurb */
 .blurb {
     max-width: 600px;
