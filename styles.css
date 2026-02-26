@@ -375,6 +375,17 @@ main a:visited:hover {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.exp-blurb::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .exp-skills {
