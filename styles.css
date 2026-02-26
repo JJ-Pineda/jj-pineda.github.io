@@ -124,6 +124,31 @@ main {
     fill: currentColor;
 }
 
+.social-links-fixed a[data-tooltip] {
+    position: relative;
+}
+
+.social-links-fixed a[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    padding: 3px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.social-links-fixed a[data-tooltip]:hover::before {
+    opacity: 1;
+}
+
 .home-main {
     justify-content: flex-start;
     padding-top: 5rem;
