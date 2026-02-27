@@ -272,8 +272,10 @@ main {
     font-size: 1rem;
 }
 
-.pub-title a {
+.pub-title a,
+.pub-title a:visited {
     text-decoration: underline;
+    color: #333;
 }
 
 .pub-authors {
