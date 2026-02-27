@@ -166,7 +166,7 @@ main {
 .profile-tagline {
     margin-bottom: 0.75rem;
     font-style: italic;
-    color: #555;
+    color: #444;
 }
 
 .profile-role {
@@ -468,7 +468,6 @@ main a:visited:hover {
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
 
 .edu-detail {
     margin-left: 3rem;
