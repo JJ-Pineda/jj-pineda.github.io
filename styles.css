@@ -29,10 +29,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
-    height: 60px;
+    flex-wrap: wrap;
+    padding: 0.75rem 2rem;
+    min-height: 60px;
     background-color: #2c3e50;
     color: #fff;
+    gap: 0.5rem;
 }
 
 .site-name {
@@ -50,7 +52,8 @@ header {
 /* Navigation */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -82,53 +85,49 @@ main {
 /* Profile section */
 .profile-section {
     display: flex;
-    align-items: flex-start;
-    gap: 3rem;
+    align-items: center;
+    gap: 1.5rem;
     padding: 2rem 2rem 0 2rem;
 }
 
-.profile-section .profile-photo {
-    position: static;
-    width: 160px;
-    height: 160px;
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
     flex-shrink: 0;
 }
 
-.social-links-fixed {
-    position: fixed;
-    top: calc(60px + 2rem);
-    right: 2rem;
+.profile-social {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     align-items: center;
-    z-index: 100;
+    flex-shrink: 0;
+    margin-left: auto;
+    order: 1;
 }
 
-.social-links-fixed a {
+.profile-social a {
     display: flex;
     color: #444;
+    position: relative;
     transition:
         color 0.2s,
         transform 0.2s;
 }
 
-.social-links-fixed a:hover {
+.profile-social a:hover {
     color: #0066cc;
     transform: translateY(-2px);
 }
 
-.social-links-fixed svg {
+.profile-social svg {
     width: 28px;
     height: 28px;
     fill: currentColor;
 }
 
-.social-links-fixed a[data-tooltip] {
-    position: relative;
-}
-
-.social-links-fixed a[data-tooltip]::before {
+.profile-social a[data-tooltip]::before {
     content: attr(data-tooltip);
     position: absolute;
     right: calc(100% + 10px);
@@ -145,7 +144,7 @@ main {
     transition: opacity 0.15s;
 }
 
-.social-links-fixed a[data-tooltip]:hover::before {
+.profile-social a[data-tooltip]:hover::before {
     opacity: 1;
 }
 
@@ -329,15 +328,6 @@ main a:visited:hover {
     font-size: 1.05rem;
 }
 
-/* Profile photo */
-.profile-photo {
-    position: absolute;
-    top: calc(60px + 2rem);
-    left: 2rem;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-}
 
 /* About page */
 .about-content {
@@ -346,7 +336,6 @@ main a:visited:hover {
     line-height: 1.8;
     color: #555;
     font-size: 1.05rem;
-    margin-top: 4rem;
 }
 
 .about-content h1 {
@@ -364,7 +353,7 @@ main a:visited:hover {
 .content-left {
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2.5rem 4rem;
+    padding: 2.5rem clamp(1.25rem, 5vw, 4rem);
 }
 
 .content-left h1 {
@@ -399,7 +388,7 @@ main a:visited:hover {
 
 .exp-role {
     margin-top: 2.5rem;
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
 }
 
 .exp-role h4 {
@@ -434,7 +423,7 @@ main a:visited:hover {
 
 .exp-skills {
     margin-top: 0.5rem;
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -472,14 +461,14 @@ main a:visited:hover {
 }
 
 .edu-blurb {
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
 .edu-detail {
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
     margin-top: 0.75rem;
     color: #555;
     font-size: 0.95rem;
@@ -495,19 +484,25 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
-    .social-links {
-        gap: 1.5rem;
+@media (max-width: 640px) {
+    header {
+        padding: 0.75rem 1rem;
     }
 
-    .social-links svg {
-        width: 28px;
-        height: 28px;
+    .profile-section {
+        justify-content: center;
+        padding: 1rem;
     }
 
-    .blurb,
-    .about-content {
-        font-size: 0.95rem;
-        padding: 0 1rem;
+    .profile-info {
+        text-align: center;
+    }
+
+    .home-main {
+        padding-top: 1.5rem;
+    }
+
+    .carousel {
+        gap: 0.25rem;
     }
 }
