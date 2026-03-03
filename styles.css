@@ -532,13 +532,51 @@ footer {
         padding: 0.75rem 1rem;
     }
 
-    .profile-section {
+    /* Index: stack photo + info vertically, center everything */
+    .profile-section:not(.profile-section--centered):not(.profile-section--about) {
+        flex-wrap: wrap;
         justify-content: center;
         padding: 1rem;
     }
 
+    .profile-section:not(.profile-section--centered):not(.profile-section--about) .profile-social {
+        margin-left: 0;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+
     .profile-info {
         text-align: center;
+        width: 100%;
+        order: 1;
+    }
+
+    /* About: stack h1, photo, and icons vertically */
+    .profile-section--about {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .profile-section--about h1 {
+        flex: none;
+    }
+
+    .profile-social--about {
+        flex: none;
+        justify-content: center;
+    }
+
+    /* Experience/Education: stack h1 above icons */
+    .profile-section--centered {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .profile-section--centered .profile-social {
+        margin-left: 0;
     }
 
     .home-main {
