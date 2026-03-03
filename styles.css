@@ -569,10 +569,10 @@ footer {
         justify-content: center;
     }
 
-    /* Experience/Education: stack h1 above icons */
+    /* Experience/Education: keep row but space h1 and icons apart */
     .profile-section--centered {
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 0.75rem;
     }
 
     .profile-section--centered .profile-social {
