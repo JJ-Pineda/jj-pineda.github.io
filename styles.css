@@ -106,10 +106,7 @@ main {
     order: 1;
 }
 
-.profile-section:not(.profile-section--centered) .profile-social {
-    margin-left: auto;
-}
-
+.profile-section:not(.profile-section--centered):not(.profile-section--about) .profile-social,
 .profile-section--centered .profile-social {
     margin-left: auto;
 }
@@ -120,6 +117,27 @@ main {
 
 .profile-section--centered {
     justify-content: flex-start;
+}
+
+.profile-section--about {
+    align-items: center;
+    max-width: 640px;
+    width: 100%;
+    align-self: center;
+    padding: 2rem clamp(1.25rem, 5vw, 4rem) 0.5rem;
+}
+
+.profile-section--about h1 {
+    flex: 1;
+}
+
+.profile-section--about .profile-photo {
+    flex-shrink: 0;
+}
+
+.profile-social--about {
+    flex: 1;
+    justify-content: flex-end;
 }
 
 
