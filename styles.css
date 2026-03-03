@@ -29,10 +29,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
-    height: 60px;
+    flex-wrap: wrap;
+    padding: 0.75rem 2rem;
+    min-height: 60px;
     background-color: #2c3e50;
     color: #fff;
+    gap: 0.5rem;
 }
 
 .site-name {
@@ -50,7 +52,8 @@ header {
 /* Navigation */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -76,59 +79,86 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 /* Profile section */
 .profile-section {
     display: flex;
-    align-items: flex-start;
-    gap: 3rem;
-    padding: 2rem 2rem 0 2rem;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem clamp(1.25rem, 5vw, 4rem) 0;
 }
 
-.profile-section .profile-photo {
-    position: static;
-    width: 160px;
-    height: 160px;
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
     flex-shrink: 0;
 }
 
-.social-links-fixed {
-    position: fixed;
-    top: calc(60px + 2rem);
-    right: 2rem;
+.profile-social {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     align-items: center;
-    z-index: 100;
+    flex-shrink: 0;
+    order: 1;
 }
 
-.social-links-fixed a {
+.profile-section:not(.profile-section--centered):not(.profile-section--about) .profile-social,
+.profile-section--centered .profile-social {
+    margin-left: auto;
+}
+
+.profile-social--horizontal {
+    flex-direction: row;
+}
+
+.profile-section--centered {
+    justify-content: flex-start;
+}
+
+.profile-section--about {
+    align-items: center;
+    max-width: 640px;
+    width: 100%;
+    align-self: center;
+    padding: 2rem clamp(1.25rem, 5vw, 4rem) 0.5rem;
+}
+
+.profile-section--about h1 {
+    flex: 1;
+}
+
+
+.profile-social--about {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+
+.profile-social a {
     display: flex;
     color: #444;
+    position: relative;
     transition:
         color 0.2s,
         transform 0.2s;
 }
 
-.social-links-fixed a:hover {
+.profile-social a:hover {
     color: #0066cc;
     transform: translateY(-2px);
 }
 
-.social-links-fixed svg {
+.profile-social svg {
     width: 28px;
     height: 28px;
     fill: currentColor;
 }
 
-.social-links-fixed a[data-tooltip] {
-    position: relative;
-}
-
-.social-links-fixed a[data-tooltip]::before {
+.profile-social a[data-tooltip]::before {
     content: attr(data-tooltip);
     position: absolute;
     right: calc(100% + 10px);
@@ -145,7 +175,7 @@ main {
     transition: opacity 0.15s;
 }
 
-.social-links-fixed a[data-tooltip]:hover::before {
+.profile-social a[data-tooltip]:hover::before {
     opacity: 1;
 }
 
@@ -182,38 +212,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Social links */
-.social-links {
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-}
-
-.social-links a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #444;
-    font-size: 0.9rem;
-    transition:
-        color 0.2s,
-        transform 0.2s;
-}
-
-.social-links a:hover {
-    color: #0066cc;
-    transform: translateY(-2px);
-}
-
-.social-links svg {
-    width: 36px;
-    height: 36px;
-    fill: currentColor;
-}
 
 /* Publications / Presentations */
 .section-heading {
@@ -320,40 +318,16 @@ main a:visited:hover {
     color: #0066cc;
 }
 
-/* Blurb */
-.blurb {
-    max-width: 600px;
-    text-align: center;
-    line-height: 1.7;
-    color: #555;
-    font-size: 1.05rem;
-}
-
-/* Profile photo */
-.profile-photo {
-    position: absolute;
-    top: calc(60px + 2rem);
-    left: 2rem;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-}
 
 /* About page */
 .about-content {
     max-width: 640px;
+    width: 100%;
     text-align: left;
     line-height: 1.8;
     color: #555;
     font-size: 1.05rem;
-    margin-top: 4rem;
-}
-
-.about-content h1 {
-    font-size: 1.75rem;
-    color: #333;
-    margin-bottom: 1.25rem;
-    text-align: center;
+    padding: 0 clamp(1.25rem, 5vw, 4rem);
 }
 
 .about-content p {
@@ -364,14 +338,15 @@ main a:visited:hover {
 .content-left {
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2.5rem 4rem;
+    padding: 2.5rem clamp(1.25rem, 5vw, 4rem);
 }
 
-.content-left h1 {
+.profile-section h1 {
     font-size: 1.75rem;
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
+
 
 /* Experience */
 .exp-company {
@@ -399,7 +374,7 @@ main a:visited:hover {
 
 .exp-role {
     margin-top: 2.5rem;
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
 }
 
 .exp-role h4 {
@@ -434,7 +409,7 @@ main a:visited:hover {
 
 .exp-skills {
     margin-top: 0.5rem;
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -472,14 +447,14 @@ main a:visited:hover {
 }
 
 .edu-blurb {
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
     color: #555;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
 .edu-detail {
-    margin-left: 3rem;
+    margin-left: clamp(0rem, 4vw, 3rem);
     margin-top: 0.75rem;
     color: #555;
     font-size: 0.95rem;
@@ -495,19 +470,63 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
-    .social-links {
-        gap: 1.5rem;
+@media (max-width: 640px) {
+    header {
+        padding: 0.75rem 1rem;
     }
 
-    .social-links svg {
-        width: 28px;
-        height: 28px;
+    /* Index: stack photo + info vertically, center everything */
+    .profile-section:not(.profile-section--centered):not(.profile-section--about) {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
     }
 
-    .blurb,
-    .about-content {
-        font-size: 0.95rem;
-        padding: 0 1rem;
+    .profile-section:not(.profile-section--centered):not(.profile-section--about) .profile-social {
+        margin-left: 0;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+
+    .profile-info {
+        text-align: center;
+        width: 100%;
+        order: 1;
+    }
+
+    /* About: stack h1, photo, and icons vertically */
+    .profile-section--about {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .profile-section--about h1 {
+        flex: none;
+    }
+
+    .profile-social--about {
+        flex: none;
+        justify-content: center;
+    }
+
+    /* Experience/Education: keep row but space h1 and icons apart */
+    .profile-section--centered {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .profile-section--centered .profile-social {
+        margin-left: 0;
+    }
+
+    .home-main {
+        padding-top: 1.5rem;
+    }
+
+    .carousel {
+        gap: 0.25rem;
     }
 }
