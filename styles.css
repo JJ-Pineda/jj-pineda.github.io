@@ -131,20 +131,12 @@ main {
     flex: 1;
 }
 
-.profile-section--about .profile-photo {
-    flex-shrink: 0;
-}
 
 .profile-social--about {
     flex: 1;
     justify-content: flex-end;
 }
 
-
-
-.profile-section--centered .profile-section-balance {
-    display: none;
-}
 
 .profile-social a {
     display: flex;
@@ -220,38 +212,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Social links */
-.social-links {
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-}
-
-.social-links a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #444;
-    font-size: 0.9rem;
-    transition:
-        color 0.2s,
-        transform 0.2s;
-}
-
-.social-links a:hover {
-    color: #0066cc;
-    transform: translateY(-2px);
-}
-
-.social-links svg {
-    width: 36px;
-    height: 36px;
-    fill: currentColor;
-}
 
 /* Publications / Presentations */
 .section-heading {
@@ -358,15 +318,6 @@ main a:visited:hover {
     color: #0066cc;
 }
 
-/* Blurb */
-.blurb {
-    max-width: 600px;
-    text-align: center;
-    line-height: 1.7;
-    color: #555;
-    font-size: 1.05rem;
-}
-
 
 /* About page */
 .about-content {
@@ -377,13 +328,6 @@ main a:visited:hover {
     color: #555;
     font-size: 1.05rem;
     padding: 0 clamp(1.25rem, 5vw, 4rem);
-}
-
-.about-content h1 {
-    font-size: 1.75rem;
-    color: #333;
-    margin-bottom: 1.25rem;
-    text-align: center;
 }
 
 .about-content p {
@@ -397,7 +341,6 @@ main a:visited:hover {
     padding: 2.5rem clamp(1.25rem, 5vw, 4rem);
 }
 
-.content-left h1,
 .profile-section h1 {
     font-size: 1.75rem;
     color: #333;
