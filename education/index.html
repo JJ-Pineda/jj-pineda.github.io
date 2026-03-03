@@ -12,6 +12,11 @@
         </video>
         <header>
             <a href="/" class="site-name">Javier J Pineda, PhD</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
             <nav class="nav-links">
                 <a href="/">Home</a>
                 <a href="/about">About Me</a>
@@ -138,6 +143,20 @@
                 var vid = document.getElementById("bg-video");
                 try { vid.playbackRate = 0.5; } catch (e) {}
                 vid.loop = true;
+            })();
+            (function () {
+                var btn = document.querySelector(".nav-toggle");
+                var header = document.querySelector("header");
+                btn.addEventListener("click", function () {
+                    var open = header.classList.toggle("nav-open");
+                    btn.setAttribute("aria-expanded", open);
+                });
+                document.addEventListener("click", function (e) {
+                    if (!header.contains(e.target)) {
+                        header.classList.remove("nav-open");
+                        btn.setAttribute("aria-expanded", "false");
+                    }
+                });
             })();
         </script>
     </body>
