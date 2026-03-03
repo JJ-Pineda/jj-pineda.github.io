@@ -79,7 +79,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 /* Profile section */
@@ -87,7 +87,7 @@ main {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem clamp(1.25rem, 5vw, 4rem) 0;
 }
 
 .profile-photo {
@@ -353,10 +353,12 @@ main a:visited:hover {
 /* About page */
 .about-content {
     max-width: 640px;
+    width: 100%;
     text-align: left;
     line-height: 1.8;
     color: #555;
     font-size: 1.05rem;
+    padding: 0 clamp(1.25rem, 5vw, 4rem);
 }
 
 .about-content h1 {
