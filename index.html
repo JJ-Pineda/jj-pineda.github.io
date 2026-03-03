@@ -4,36 +4,57 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Javier Pineda, PhD — Applied AI Scientist</title>
-        <meta name="description" content="Personal website of Javier Pineda (Javier J Pineda), PhD — Applied AI Scientist specializing in AI, deep learning, data science, and bioinformatics. Director of Preclinical AI at Scientist.com." />
-        <meta property="og:title" content="Javier Pineda, PhD — Applied AI Scientist" />
-        <meta property="og:description" content="Applied AI Scientist specializing in AI, deep learning, data science, and bioinformatics." />
+        <meta
+            name="description"
+            content="Personal website of Javier Pineda (Javier J Pineda), PhD — Applied AI Scientist specializing in AI, deep learning, data science, and bioinformatics. Director of Preclinical AI at Scientist.com."
+        />
+        <meta
+            property="og:title"
+            content="Javier Pineda, PhD — Applied AI Scientist"
+        />
+        <meta
+            property="og:description"
+            content="Applied AI Scientist specializing in AI, deep learning, data science, and bioinformatics."
+        />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://jj-pineda.github.io/" />
         <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Javier Pineda",
-            "alternateName": "Javier J Pineda",
-            "url": "https://jj-pineda.github.io/",
-            "jobTitle": "Director of Preclinical AI",
-            "worksFor": { "@type": "Organization", "name": "Scientist.com" },
-            "alumniOf": [
-                { "@type": "CollegeOrUniversity", "name": "Harvard University" },
-                { "@type": "CollegeOrUniversity", "name": "University of Notre Dame" }
-            ],
-            "sameAs": [
-                "https://github.com/jj-pineda",
-                "https://linkedin.com/in/javier-j-pineda",
-                "https://scholar.google.com/citations?user=IIAo-P4AAAAJ"
-            ]
-        }
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Javier Pineda",
+                "alternateName": "Javier J Pineda",
+                "url": "https://jj-pineda.github.io/",
+                "jobTitle": "Director of Preclinical AI",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Scientist.com"
+                },
+                "alumniOf": [
+                    {
+                        "@type": "CollegeOrUniversity",
+                        "name": "Harvard University"
+                    },
+                    {
+                        "@type": "CollegeOrUniversity",
+                        "name": "University of Notre Dame"
+                    }
+                ],
+                "sameAs": [
+                    "https://github.com/jj-pineda",
+                    "https://linkedin.com/in/javier-j-pineda",
+                    "https://scholar.google.com/citations?user=IIAo-P4AAAAJ"
+                ]
+            }
         </script>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <video id="bg-video" autoplay muted loop>
-            <source src="assets/neural-network-background-pingpong.mp4" type="video/mp4" />
+        <video id="bg-video" autoplay muted loop playsinline>
+            <source
+                src="assets/neural-network-background-pingpong.mp4"
+                type="video/mp4"
+            />
         </video>
         <header>
             <a href="/" class="site-name">Javier J Pineda, PhD</a>
@@ -234,9 +255,9 @@
                                 ><a
                                     href="https://elifesciences.org/articles/45426"
                                     target="_blank"
-                                    >Replication Study: Wnt activity defines colon
-                                    cancer stem cells and is regulated by the
-                                    microenvironment</a
+                                    >Replication Study: Wnt activity defines
+                                    colon cancer stem cells and is regulated by
+                                    the microenvironment</a
                                 ></span
                             >
                             <span class="pub-authors"
@@ -367,7 +388,9 @@
         <script>
             (function () {
                 var vid = document.getElementById("bg-video");
-                vid.playbackRate = 0.5;
+                try {
+                    vid.playbackRate = 0.5;
+                } catch (e) {}
                 vid.loop = true;
             })();
             (function () {
