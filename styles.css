@@ -332,7 +332,6 @@ main a:visited:hover {
 
 /* About page */
 .about-content {
-    max-width: 640px;
     width: 100%;
     text-align: left;
     line-height: 1.8;
